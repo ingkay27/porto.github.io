@@ -32,12 +32,13 @@
                 <span></span>
             </div>
         </div>
-        
-        <div class="hero">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.79/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/pRHqN7HsY32BjeHr/scene.splinecode"></spline-viewer>
+        <!-- <div class="hero">
             <h1>Junior Data Analyst</h1>
             <div class="hero-subtitle">Transforming complex data into actionable insights.</div>
-            <!-- <a href="#projects" class="hero-cta" data-target="projects">View My Work</a> -->
-        </div>
+            <a href="#projects" class="hero-cta" data-target="projects">View My Work</a>
+        </div> -->
         
         <!-- <div class="scroll-indicator">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -132,7 +133,19 @@
         </div>
         <p>© 2025 Portfolio. All rights reserved.</p>
     </footer>
+    <script>
+        import Spline from '@splinetool/react-spline/next';
 
+        export default function Home() {
+        return (
+            <main>
+            <Spline
+                scene="https://prod.spline.design/pRHqN7HsY32BjeHr/scene.splinecode" 
+            />
+            </main>
+        );
+        }
+    </script>
     <script>
         // Custom cursor
         const cursor = document.querySelector('.cursor');

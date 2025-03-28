@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#6366f1",
+              secondary: "#9333ea",
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+      }
+      @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+      }
+      @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      }
+      @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+      20%, 40%, 60%, 80% { transform: translateX(5px); }
+      }
+      @keyframes jello {
+      0%, 11.1%, 100% { transform: none; }
+      22.2% { transform: skewX(-12.5deg) skewY(-12.5deg); }
+      33.3% { transform: skewX(6.25deg) skewY(6.25deg); }
+      44.4% { transform: skewX(-3.125deg) skewY(-3.125deg); }
+      55.5% { transform: skewX(1.5625deg) skewY(1.5625deg); }
+      66.6% { transform: skewX(-0.78125deg) skewY(-0.78125deg); }
+      77.7% { transform: skewX(0.390625deg) skewY(0.390625deg); }
+      88.8% { transform: skewX(-0.1953125deg) skewY(-0.1953125deg); }
+      }
+      .animate-float {
+      animation: float 6s ease-in-out infinite;
+      }
+      .animate-spin {
+      animation: spin 8s linear infinite;
+      }
+      .animate-bounce {
+      animation: bounce 1s ease infinite;
+      }
+      .animate-shake {
+      animation: shake 0.5s ease infinite;
+      }
+      .animate-jello {
+      animation: jello 2s ease infinite;
+      }
+      .glow {
+      box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+      }
+    </style>
+  </head>
+  <body class="bg-[#121212] min-h-screen flex items-center justify-center p-4">
+    <div class="text-center">
+      <div class="animate-float mb-8">
+        <div
+          class="text-[200px] font-bold bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text leading-none"
+        >
+          404
+        </div>
+      </div>
+      <h1 class="text-4xl font-bold text-white mb-4">Oops! Page Not Found</h1>
+      <p class="text-gray-400 mb-8 max-w-md mx-auto">
+        The page you are looking for might have been removed, had its name
+        changed, or is temporarily unavailable.
+      </p>
+      <div class="flex justify-center mb-8 space-x-4">
+        <div
+          class="w-16 h-16 bg-primary rounded-full animate-bounce flex items-center justify-center text-white font-bold"
+        >
+          Oops!
+        </div>
+        <div
+          class="w-16 h-16 bg-secondary rounded-full animate-jello flex items-center justify-center text-white font-bold delay-100"
+        >
+          404
+        </div>
+        <div
+          class="w-16 h-16 bg-primary rounded-full animate-bounce flex items-center justify-center text-white font-bold delay-200"
+        >
+          Lost!
+        </div>
+      </div>
+      <a
+        href="/"
+        class="inline-block px-8 py-3 bg-gradient-to-r from-primary to-secondary text-white font-semibold !rounded-button hover:opacity-90 transition-all duration-300 glow mb-12 cursor-pointer whitespace-nowrap group"
+      >
+        <span class="inline-block group-hover:animate-shake">Back to Home</span>
+        <i
+          class="ri-home-line ml-2 group-hover:animate-bounce inline-block"
+        ></i>
+      </a>
+      <div class="relative w-24 h-24 mx-auto mb-12">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full animate-spin opacity-30"
+        ></div>
+        <div
+          class="absolute inset-2 bg-[#121212] rounded-full flex items-center justify-center"
+        >
+          <i class="ri-ghost-line ri-3x text-white"></i>
+        </div>
+      </div>
+      <div class="flex justify-center items-center gap-6 flex-wrap">
+        <a
+          href="https://twitter.com"
+          target="_blank"
+          class="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer hover:animate-jello"
+        >
+          <i class="ri-twitter-x-line ri-xl"></i>
+        </a>
+        <a
+          href="https://instagram.com"
+          target="_blank"
+          class="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer hover:animate-jello"
+        >
+          <i class="ri-instagram-line ri-xl"></i>
+        </a>
+        <a
+          href="https://linkedin.com"
+          target="_blank"
+          class="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer hover:animate-jello"
+        >
+          <i class="ri-linkedin-line ri-xl"></i>
+        </a>
+        <a
+          href="https://github.com"
+          target="_blank"
+          class="w-12 h-12 flex items-center justify-center text-gray-400 hover:text-white transition-colors duration-300 cursor-pointer hover:animate-jello"
+        >
+          <i class="ri-github-line ri-xl"></i>
+        </a>
+      </div>
+    </div>
+    <div class="fixed inset-0 pointer-events-none">
+      <div
+        class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]"
+      ></div>
+    </div>
+    <script>
+      document.addEventListener("mousemove", (e) => {
+        const x = e.clientX / window.innerWidth;
+        const y = e.clientY / window.innerHeight;
+        document.body.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, #1a1a1a 0%, #121212 50%)`;
+      });
+      // Create floating elements
+      function createFloatingElements() {
+        const container = document.createElement("div");
+        container.className = "fixed inset-0 pointer-events-none overflow-hidden";
+        document.body.appendChild(container);
+
+        const icons = [
+          "ri-question-line",
+          "ri-error-warning-line",
+          "ri-compass-line",
+          "ri-map-pin-line",
+          "ri-search-line",
+          "ri-roadmap-line",
+        ];
+
+        for (let i = 0; i < 15; i++) {
+          const element = document.createElement("div");
+          const size = Math.random() * 30 + 20;
+          const icon = icons[Math.floor(Math.random() * icons.length)];
+
+          element.className = `absolute text-gray-700 opacity-20`;
+          element.innerHTML = `<i class="${icon}" style="font-size: ${size}px;"></i>`;
+
+          // Random position
+          element.style.left = `${Math.random() * 100}%`;
+          element.style.top = `${Math.random() * 100}%`;
+
+          // Random animation
+          const duration = Math.random() * 20 + 10;
+          const delay = Math.random() * 5;
+
+          element.style.animation = `float ${duration}s ease-in-out ${delay}s infinite`;
+
+          container.appendChild(element);
+        }
+      }
+      // Add funny cursor effect
+      function createCursorEffect() {
+        const cursor = document.createElement("div");
+        cursor.className = "fixed w-8 h-8 pointer-events-none z-50 opacity-0";
+        cursor.innerHTML = '<i class="ri-ghost-line text-primary ri-2x"></i>';
+        document.body.appendChild(cursor);
+
+        document.addEventListener("mousemove", (e) => {
+          cursor.style.opacity = "1";
+          cursor.style.left = `${e.clientX}px`;
+          cursor.style.top = `${e.clientY}px`;
+          cursor.style.transform = "translate(-50%, -50%)";
+
+          // Hide after 2 seconds of inactivity
+          clearTimeout(window.cursorTimeout);
+          window.cursorTimeout = setTimeout(() => {
+            cursor.style.opacity = "0";
+          }, 2000);
+        });
+      }
+      // Initialize
+      window.addEventListener("DOMContentLoaded", () => {
+        createFloatingElements();
+        createCursorEffect();
+      });
+    </script>
+  </body>
+</html>

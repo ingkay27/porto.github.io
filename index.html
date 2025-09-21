@@ -3,276 +3,194 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inky - Portofolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Inky Pramudia Ramdhani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #0a0a0a;
+            color: #e5e5e5;
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 300;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .websites-grid {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .website-card {
+            background: #111;
+            border: 1px solid #222;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .website-card:hover {
+            background: #161616;
+            border-color: #333;
+            transform: translateY(-2px);
+        }
+
+        .website-title {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+
+        .website-description {
+            color: #aaa;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .website-url {
+            color: #666;
+            font-size: 0.9rem;
+            text-decoration: none;
+            font-family: 'Courier New', monospace;
+            transition: color 0.3s ease;
+        }
+
+        .website-url:hover {
+            color: #999;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 0.25rem 0.6rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            border: 1px solid #333;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .website-card {
+                padding: 1.25rem;
+            }
+            
+            .website-title {
+                font-size: 1.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 1rem 0.75rem;
+            }
+            
+            h1 {
+                font-size: 1.75rem;
+            }
+            
+            .website-card {
+                padding: 1rem;
+            }
+            
+            .tech-stack {
+                gap: 0.4rem;
+            }
+            
+            .tech-tag {
+                font-size: 0.75rem;
+                padding: 0.2rem 0.5rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .websites-grid {
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            }
+        }
+    </style>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container navbar-content">
-            <div class="logo">Portofolio</div>
-            <div class="burger" onclick="toggleMenu()">
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-                <div class="burger-line"></div>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#home" onclick="closeMenu()">Home</a></li>
-                <li><a href="#about" onclick="closeMenu()">About</a></li>
-                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div class="container">
+        <header>
+            <h1>Inky Pramudia Ramdhani</h1>
+            <p class="subtitle">Data Analysist</p>
+        </header>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <div class="hero-img">
-                <img src="img/profil.png" alt="Inky Pramudia Ramdhani">
-            </div>
-            <div class="hero-text">
-                <h1>Inky Pramudia Ramdhani</h1>
-                <h2>Data Analysis Junior</h2>
-                <p>Transforming complex data into actionable insights.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>About Me</h2>
-            </div>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p>Highly motivated and detail-oriented statistics student with a strong passion for data analysis. Proficient in utilizing Excel, statistical software, and data visualization tools to extract insights from complex data sets.</p>    
-                <br>
-                <p>With a solid foundation in statistical theory and data modeling, I am eager to apply my skills in a real-world setting as a data analyst.</p>
-                <br>
-                <p>I am confident in my ability to collect, analyze, and interpret large data sets, and to communicate findings effectively to both technical and non-technical stakeholders.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Skills</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Advanced Formulas</h3>
-                    <p>Complex calculations and data manipulation</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Pivot Tables</h3>
-                    <p>Dynamic data summarization and analysis</p>
-                </div>
-                <div class="skill-card">
-                    <h3>VBA Macros</h3>
-                    <p>Automation and custom Excel solutions</p>
-                </div>
-                <div class="skill-card">
-                    <h3>Python</h3>
-                    <p>Fundamental knowledge of Python programming</p>
-                </div>
-                <div class="skill-card">
-                    <h3>SQL</h3>
-                    <p>Has fundamental knowledge of SQL scripting</p>
-                </div>
-                <div class="skill-card">
-                    <h3>HTML and CSS</h3>
-                    <p>Experienced in HTML5 and CSS3 development</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section">
-        <!-- <div class="container">
-            <div class="section-title">
-                <h2>Excel Project Showcase</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>Sales Dashboard</h3>
-                    <p>Interactive quarterly sales performance tracker</p>
-                    <a href="#" class="btn">View Details</a>
-                </div>
-                <div class="project-card">
-                    <h3>Financial Model</h3>
-                    <p>Comprehensive budget forecasting tool</p>
-                    <a href="#" class="btn">View Details</a>
-                </div>
-                <div class="project-card">
-                    <h3>Inventory Analysis</h3>
-                    <p>Stock optimization and predictive modeling</p>
-                    <a href="#" class="btn">View Details</a>
-                </div>
-            </div>
-        </div> -->
-        <div class="container">
-            <div class="section-title">
-                <h2>Projects</h2>
-            </div>
-            <div class="project-grid">
-                <!-- Project Card 1 -->
-                <div class="project-card">
-                    <img src="img/salesdashboard.jpg" alt="Sales Analysis Screenshot" class="project-image">
-                    <div class="project-content">
-                        <h2 class="project-title">Sales Analysis</h2>
-                        <p class="project-desc">Quarterly sales data analysis with pivot tables and charts</p>
-                        <span class="status-badge status-active">Pivot Chart</span>
-                        <span class="status-badge status-active">Excel Formula</span>
-                        <!-- <div class="progress-bar">
-                            <div class="progress-fill" style="width: 75%"></div>
-                        </div> -->
-                        <!-- <div class="project-stats">
-                            <div class="stat-item">
-                                <div class="stat-label">Sheets</div>
-                                <div class="stat-value">8</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-label">Last Updated</div>
-                                <div class="stat-value">2d ago</div>
-                            </div>
-                        </div> -->
+        <div class="websites-grid">
+            <div class="website-card">
+                <a href="portofolio/" style="text-decoration: none;">
+                    <h3 class="website-title">Excel Portofolio</h3>
+                    <p class="website-description">A showcase of my creative work and professional experience, featuring interactive dashboard using Ms Excel</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Ms Excel</span>
+                        <span class="tech-tag">Visual Basic</span>
+                        <span class="tech-tag">Complex Formula</span>
                     </div>
-                </div>
-    
-                <!-- Project Card 2 -->
-                <div class="project-card">
-                    <img src="img/finance.jpg" alt="Budget Tracker Screenshot" class="project-image">
-                    <div class="project-content">
-                        <h2 class="project-title">Personal Budget</h2>
-                        <p class="project-desc">Annual budget planning and expense tracking system</p>
-                        <span class="status-badge status-active">Pivot Chart</span>
-                        <span class="status-badge status-active">Excel Formula</span>
-                        <span class="status-badge status-active">VBA script</span>
-                        <!-- <div class="progress-bar">
-                            <div class="progress-fill" style="width: 100%"></div>
-                        </div>
-                        <div class="project-stats">
-                            <div class="stat-item">
-                                <div class="stat-label">Sheets</div>
-                                <div class="stat-value">12</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-label">Last Updated</div>
-                                <div class="stat-value">1w ago</div>
-                            </div>
-                        </div> -->
+                </a>
+            </div>
+            <div class="website-card">
+                <a href="CV/" style="text-decoration: none;">
+                    <h3 class="website-title">Curriculum Vitae</h3>
+                    <p class="website-description">My Curriculum Vitae</p>
+                    <div class="tech-stack">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
                     </div>
-                </div>
-    
-                <!-- Project Card 3 -->
-                <div class="project-card">
-                    <img src="img//api/placeholder/400/320" alt="Inventory Management Screenshot" class="project-image">
-                    <div class="project-content">
-                        <h2 class="project-title">Inventory Management</h2>
-                        <p class="project-desc">Real-time inventory tracking with automated calculations</p>
-                        <span class="status-badge status-active">In Progress</span>
-                        <div class="progress-bar">
-                            <div class="progress-fill" style="width: 45%"></div>
-                        </div>
-                        <div class="project-stats">
-                            <div class="stat-item">
-                                <div class="stat-label">Sheets</div>
-                                <div class="stat-value">5</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-label">Last Updated</div>
-                                <div class="stat-value">1d ago</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
-    </section>
-
-    <footer>
-        <div class="footer-content">
-            <!-- About Section -->
-            <div class="footer-section">
-                <h3>About Me</h3>
-                <p class="contact-info">
-                    Statistics student with a passion for data analysis, proficient in Excel, statistical software, and data visualization tools. Strong foundation in statistical theory and data modeling, with excellent analytical and communication skills.
-                </p>
-                <!-- <div class="project-overview">
-                    <div class="stat-item">
-                        <div class="stat-number">50+</div>
-                        <div class="stat-label">Projects</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Years Exp</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label">Clients</div>
-                    </div>
-                </div> -->
-            </div>
-
-            <!-- Quick Links -->
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <!-- <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#blog">Blog</a></li> -->
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                </ul>
-            </div>
-
-            <!-- Contact Info -->
-            <div class="footer-section">
-                <h3>Contact Info</h3>
-                <div class="contact-info">
-                    <p>📍 Majalengka, Jawa Barat</p>
-                    <p>📧 inkypramudiaramdhani27@gmail.com</p>
-                    <!-- <p>📱 +1 234 567 890</p> -->
-                </div>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/in/inky-pramudia-ramdhani-77483b347/" title="LinkedIn" target="_blank">in</a>
-                    <a href="https://github.com/ingkay27" title="GitHub" target="_blank">git</a>
-                    <!-- <a href="#" title="Twitter">𝕏</a> -->
-                    <a href="https://www.instagram.com/inky_2711/" title="Instagram" target="_blank">📷</a>
-                </div>
-            </div>
-
-            <!-- Newsletter -->
-            <div class="footer-section">
-                <h3>Latest Projects</h3>
-                <ul class="footer-links">
-                    <li><a href="#project1">E-commerce Platform</a></li>
-                    <li><a href="#project2">Mobile Banking App</a></li>
-                    <li><a href="#project3">Healthcare Dashboard</a></li>
-                    <li><a href="#project4">Education Platform</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Footer Bottom -->
-        <div class="footer-bottom">
-            <p>&copy; 2024 Inky Portfolio. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
-        }
-
-        function closeMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.remove('active');
-        }
-    </script>
+    </div>
 </body>
 </html>

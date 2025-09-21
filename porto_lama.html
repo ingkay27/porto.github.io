@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inky - Portofolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">Portofolio</div>
+            <div class="burger" onclick="toggleMenu()">
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+                <div class="burger-line"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#skills" onclick="closeMenu()">Skills</a></li>
+                <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <div class="hero-img">
+                <img src="img/profil.png" alt="Inky Pramudia Ramdhani">
+            </div>
+            <div class="hero-text">
+                <h1>Inky Pramudia Ramdhani</h1>
+                <h2>Data Analysis Junior</h2>
+                <p>Transforming complex data into actionable insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p>Highly motivated and detail-oriented statistics student with a strong passion for data analysis. Proficient in utilizing Excel, statistical software, and data visualization tools to extract insights from complex data sets.</p>    
+                <br>
+                <p>With a solid foundation in statistical theory and data modeling, I am eager to apply my skills in a real-world setting as a data analyst.</p>
+                <br>
+                <p>I am confident in my ability to collect, analyze, and interpret large data sets, and to communicate findings effectively to both technical and non-technical stakeholders.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Skills</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Advanced Formulas</h3>
+                    <p>Complex calculations and data manipulation</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Pivot Tables</h3>
+                    <p>Dynamic data summarization and analysis</p>
+                </div>
+                <div class="skill-card">
+                    <h3>VBA Macros</h3>
+                    <p>Automation and custom Excel solutions</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>Fundamental knowledge of Python programming</p>
+                </div>
+                <div class="skill-card">
+                    <h3>SQL</h3>
+                    <p>Has fundamental knowledge of SQL scripting</p>
+                </div>
+                <div class="skill-card">
+                    <h3>HTML and CSS</h3>
+                    <p>Experienced in HTML5 and CSS3 development</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <!-- <div class="container">
+            <div class="section-title">
+                <h2>Excel Project Showcase</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Sales Dashboard</h3>
+                    <p>Interactive quarterly sales performance tracker</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="project-card">
+                    <h3>Financial Model</h3>
+                    <p>Comprehensive budget forecasting tool</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+                <div class="project-card">
+                    <h3>Inventory Analysis</h3>
+                    <p>Stock optimization and predictive modeling</p>
+                    <a href="#" class="btn">View Details</a>
+                </div>
+            </div>
+        </div> -->
+        <div class="container">
+            <div class="section-title">
+                <h2>Projects</h2>
+            </div>
+            <div class="project-grid">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <img src="img/salesdashboard.jpg" alt="Sales Analysis Screenshot" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">Sales Analysis</h2>
+                        <p class="project-desc">Quarterly sales data analysis with pivot tables and charts</p>
+                        <span class="status-badge status-active">Pivot Chart</span>
+                        <span class="status-badge status-active">Excel Formula</span>
+                        <!-- <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%"></div>
+                        </div> -->
+                        <!-- <div class="project-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Sheets</div>
+                                <div class="stat-value">8</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Last Updated</div>
+                                <div class="stat-value">2d ago</div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+    
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <img src="img/finance.jpg" alt="Budget Tracker Screenshot" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">Personal Budget</h2>
+                        <p class="project-desc">Annual budget planning and expense tracking system</p>
+                        <span class="status-badge status-active">Pivot Chart</span>
+                        <span class="status-badge status-active">Excel Formula</span>
+                        <span class="status-badge status-active">VBA script</span>
+                        <!-- <div class="progress-bar">
+                            <div class="progress-fill" style="width: 100%"></div>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Sheets</div>
+                                <div class="stat-value">12</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Last Updated</div>
+                                <div class="stat-value">1w ago</div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+    
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <img src="img//api/placeholder/400/320" alt="Inventory Management Screenshot" class="project-image">
+                    <div class="project-content">
+                        <h2 class="project-title">Inventory Management</h2>
+                        <p class="project-desc">Real-time inventory tracking with automated calculations</p>
+                        <span class="status-badge status-active">In Progress</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 45%"></div>
+                        </div>
+                        <div class="project-stats">
+                            <div class="stat-item">
+                                <div class="stat-label">Sheets</div>
+                                <div class="stat-value">5</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-label">Last Updated</div>
+                                <div class="stat-value">1d ago</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <!-- About Section -->
+            <div class="footer-section">
+                <h3>About Me</h3>
+                <p class="contact-info">
+                    Statistics student with a passion for data analysis, proficient in Excel, statistical software, and data visualization tools. Strong foundation in statistical theory and data modeling, with excellent analytical and communication skills.
+                </p>
+                <!-- <div class="project-overview">
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Years Exp</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">30+</div>
+                        <div class="stat-label">Clients</div>
+                    </div>
+                </div> -->
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <!-- <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li> -->
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <p>📍 Majalengka, Jawa Barat</p>
+                    <p>📧 inkypramudiaramdhani27@gmail.com</p>
+                    <!-- <p>📱 +1 234 567 890</p> -->
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/inky-pramudia-ramdhani-77483b347/" title="LinkedIn" target="_blank">in</a>
+                    <a href="https://github.com/ingkay27" title="GitHub" target="_blank">git</a>
+                    <!-- <a href="#" title="Twitter">𝕏</a> -->
+                    <a href="https://www.instagram.com/inky_2711/" title="Instagram" target="_blank">📷</a>
+                </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="footer-section">
+                <h3>Latest Projects</h3>
+                <ul class="footer-links">
+                    <li><a href="#project1">E-commerce Platform</a></li>
+                    <li><a href="#project2">Mobile Banking App</a></li>
+                    <li><a href="#project3">Healthcare Dashboard</a></li>
+                    <li><a href="#project4">Education Platform</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>&copy; 2024 Inky Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        function closeMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.remove('active');
+        }
+    </script>
+</body>
+</html>
